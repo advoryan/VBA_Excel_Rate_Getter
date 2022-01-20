@@ -1,6 +1,6 @@
 Attribute VB_Name = "Module1"
 Function RATE(ByVal cur_code As String, Optional ByVal xdate As String)
-Attribute RATE.VB_Description = "Возвращает курс BYN за единицу указанной валюты с сайта Нациоанльного банка"
+Attribute RATE.VB_Description = "Retuns BYN the exchange rate of the BYN per unit of the specified currency from the nbrb.by"
 Attribute RATE.VB_ProcData.VB_Invoke_Func = " \n9"
 If xdate = Null Or xdate = "" Then xdate = Date
 
@@ -43,13 +43,13 @@ Next i
         RATE = cur
     End If
     
-    If RATE <= 0 Or cur = "" Then RATE = "#ОШИБКА!"
-    If norm_cval = "" Then RATE = "Не верный код валюты по ISO4217!"
-    If response = "" Then RATE = "Данных на " & Format(xdate, "yyyy-m-d") & " пока не обнаружено!"
+        If RATE <= 0 Or cur = "" Then RATE = "#Error!"
+            If norm_cval = "" Then RATE = "Wrong ISO4217 currency code!"
+                If response = "" Then RATE = "No data as of " & Format(xdate, "yyyy-m-d") & "!"
     
 GoTo Ends:
 Error1:
-MsgBox ("Ошибка! Валюта: " & cur_code & "| Дата: " & Format(xdate, "yyyy-m-d") & " | Курс: " & RATE)
+MsgBox ("ГЋГёГЁГЎГЄГ ! Г‚Г Г«ГѕГІГ : " & cur_code & "| Г„Г ГІГ : " & Format(xdate, "yyyy-m-d") & " | ГЉГіГ°Г±: " & RATE)
 Ends:
 
 End Function
@@ -57,16 +57,16 @@ End Function
 Sub RegisterDescriptionRATE()
 
     Dim D0 As String, D1 As String, D2 As String
-        D0 = "Возвращает курс BYN за единицу указанной валюты с сайта Нациоанльного банка"
-        D1 = "Символьной код валюты, (пример: USD)"
-        D2 = "Дата(если не выбрать, то возвращается актуральный курс)"
+                    D0 = "Retuns BYN the exchange rate of the BYN per unit of the specified currency from the website of the National Bank of the Republic of Belarus"
+                    D1 = "ISO4217 currency code as string , (Example: 'USD')"
+                    D2 = "Date. By default - today"
 
     Application.MacroOptions _
         Macro:="RATE", _
             Description:=D0, _
             ArgumentDescriptions:=Array(D1, D2), _
             HasMenu:=True, _
-            MenuText:="gffdgfdgfd"
+            MenuText:="RATE"
             
 End Sub
 
