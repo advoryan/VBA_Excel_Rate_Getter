@@ -4,3 +4,6 @@ This is simple Visual Basic for Applications add-ins (Custom function) to get BY
 =RATE(Currency code; Date) Date is optional
 
 ![image](https://user-images.githubusercontent.com/48428962/150287073-d610ec06-20a0-45b9-bdc0-f9613e8a683c.png)
+
+How to add or remove an Excel add-in:
+File -> Prefrences -> Add-ins -> ![image](https://user-images.githubusercontent.com/48428962/150304973-3aea62e5-81d2-485e-b47e-d973dcd5e674.png) -> Browse (Choose add-ins file *.xlam)
