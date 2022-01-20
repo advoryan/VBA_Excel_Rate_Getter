@@ -1,6 +1,6 @@
 # VBA Excel Exchange Rate Getter form nbrb.by
 
-This is simple Visual Basic for Applications add-ins (Custom function) to get BYN exchange rates from nbrb.by. This is one of many ways to do it )
+This is simple Visual Basic for Applications add-ins (Custom function) to get BYN exchange rates from nbrb.by. This is one of many ways to get)
 
 >=RATE(Currency code; Date) Date is optional
 
